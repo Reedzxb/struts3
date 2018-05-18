@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="struts2" namespace="/" extends="struts-default">
+    <action name="regist" class="action.RegistAction" method="regist">
+        <result name="input" >/registForm.jsp</ result>
+        <result name="success">/show.jsp</result>
+    </action>
+
+    <action name="*">
+        <result>/{1}.jsp</result>
+    </action>
+    </package>
+</struts>
